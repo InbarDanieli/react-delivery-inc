@@ -2,10 +2,7 @@ import React, { useContext } from 'react'
 import UserContext from '../../../userContext';
 import {PriceSum, WeightSum} from "../utils"
 
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -33,9 +30,9 @@ function InvoicesList() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {customers.map((row) => {
+            {customers.map((row, index) => {
               return (
-                <TableRow key={row.id}
+                <TableRow key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell>{row.name}</TableCell>

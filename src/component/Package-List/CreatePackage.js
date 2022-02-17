@@ -103,7 +103,7 @@ function CreatePackage() {
                 <MenuItem value="">
                   <em>select</em>
                 </MenuItem>
-                {customers.map((customer)=><MenuItem value={customer.name}>{customer.name}</MenuItem>)}
+                {customers.map((customer, index)=><MenuItem key={index} value={customer.name}>{customer.name}</MenuItem>)}
               </Select>
             </FormControl>
 

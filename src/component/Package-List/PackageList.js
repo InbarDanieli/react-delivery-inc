@@ -62,7 +62,7 @@ function PackageList() {
 
             {packages.sort((a, b) => a.shippingOrder - b.shippingOrder).map((row, index) => {
               return (
-                <TableRow key={row.id}
+                <TableRow key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component="th" scope="row">
