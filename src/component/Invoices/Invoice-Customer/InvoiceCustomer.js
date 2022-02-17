@@ -19,35 +19,40 @@ function InvoiceCustomer(props) {
     return (
       <div className='invoice'>
 
-        <div className='dateAndName'>
-          <p>{FullDate}</p>
-          <p>{customers.find((customer) => customer?.id === ID)?.name}</p>
+        <div className='header'>
+          <div className='date-and-time'>
+            <p><u>{FullDate}</u></p>
+            <p>{customers.find((customer) => customer?.id === ID)?.name}</p>
+          </div>
+          <div className='invoiceID'>
+            <p><b>Invoice</b></p>
+            <p><b>No.{ID}</b></p>
+          </div>
         </div>
 
-        <div className='shipingID'>
-          <p>Invoice</p>
-          <p>No.{ID}</p>
+        <div className='shpping-body'>
+          <div className='packageID'>
+            <p>ID</p>
+            {currentPackage.map((packages, index) => <p key={index}>{packages.id}</p>)}
+          </div>
+
+          <div className='weight'>
+            <p>Weight</p>
+            {currentPackage.map((packages, index) => <p key={index}>{packages.weight}</p>)}
+            <p>{WeightSum(ID, packages)}</p>
+          </div>
+
+          <div className='price'>
+            <p>Price</p>
+            {currentPackage.map((packages, index) => <p key={index}>{packages.price}</p>)}
+            <p>Total: {PriceSum(ID, packages)}</p>
+          </div>
         </div>
 
-        <div className='packageID'>
-          <p>ID</p>
-          {currentPackage.map((packages, index) => <p key={index}>{packages.id}</p>)}
-        </div>
-
-        <div className='weight'>
-          <p>Weight</p>
-          {currentPackage.map((packages, index) => <p key={index}>{packages.weight}</p>)}
-          <p>{WeightSum(ID, packages)}</p>
-        </div>
-
-        <div className='price'>
-          <p>Price</p>
-          {currentPackage.map((packages, index) => <p key={index}>{packages.price}</p>)}
-          <p>Total: {PriceSum(ID, packages)}</p>
-        </div>
-
-        <p>You received {currentPackage.length} packages <br />
-          Thank you for using our services</p>
+        <p className='thank-you-text'>
+          You received {currentPackage.length} packages
+          <br />
+          Thank you for using our services !</p>
       </div>
     )
   }

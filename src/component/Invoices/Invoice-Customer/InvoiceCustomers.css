@@ -1,36 +1,63 @@
 .invoice {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 50px 40px;
-}
-
-.shipingID {
-  grid-column: 3;
-}
-
-.weight {
-  grid-column: 2;
-  grid-row: 2/5;
   display: flex;
   flex-direction: column;
-}
-
-.weight p:last-child {
-  margin-top: auto;
-}
-
-.price {
-  grid-column: 3;
-  grid-row: 2/5;
-  display: flex;
-  flex-direction: column;
-}
-.price p:last-child {
-  margin-top: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
-  grid-column: 1/4;
-  grid-row: 5;
+  margin: 0;
+  text-align: start;
+}
+
+.header {
+  width: 48%;
+  margin-top: 32px;
+}
+
+.date-and-time p {
+  padding: 4px;
+}
+
+.invoiceID p:first-child {
+  font-size: 1.5rem;
+}
+
+
+.header, .shpping-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shpping-body {
+  width: 50%;
+}
+
+.shpping-body div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.packageID, .weight, .price {
+  font-weight: 400;
+}
+
+.packageID p:first-child, .weight p:first-child, .price p:first-child {
+  font-weight: 550;
+}
+
+.weight p:last-child, .price p:last-child {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 32px;
+}
+
+
+.shpping-body, .thank-you-text {
+  margin-top: 64px;
+}
+
+.thank-you-text {
+  text-align: center;
 }
