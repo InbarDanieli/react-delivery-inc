@@ -15,10 +15,13 @@ import CreatePackage from './CreatePackage';
 
 
 function PackageList() {
-  const {packages, customers, setPackages } = useContext(UserContext)
+  const { packages, customers, setPackages } = useContext(UserContext)
 
   function DeleteHendler(Id) {
-    setPackages(packages.filter((row) => row.id !== Id))
+    setPackages(packages.filter((row) => row.id !== Id)
+      .map((row, index) => {
+        return { ...row, shippingOrder: index + 1}
+      }))
   }
 
   function handleUp(index) {
@@ -52,7 +55,7 @@ function PackageList() {
 
               <TableCell>
 
-         <CreatePackage/>
+                <CreatePackage />
 
               </TableCell>
 

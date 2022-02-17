@@ -55,7 +55,7 @@ function CreatePackage() {
           "weight": `${weight}kg`,
           "customerid": customers.find((customer)=> customer.name === name)?.id,
           "price": price,
-          "shippingOrder": pakLength
+          "shippingOrder": packages.length+1
         })
       );
     }
