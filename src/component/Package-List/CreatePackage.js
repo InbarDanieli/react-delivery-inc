@@ -32,7 +32,7 @@ function CreatePackage() {
   const [boolWeight, setBoolWeight] = useState(false)
   const [boolPrice, setBoolPrice] = useState(false)
 
-console.log(weight);
+  console.log(weight);
 
   function addPackage() {
     if (!name.length) {
@@ -116,7 +116,7 @@ console.log(weight);
               margin="dense"
               label="weight"
               type="number"
-              inputProps={{min:1}}
+              inputProps={{ min: 1 }}
               fullWidth
               variant="standard"
               InputProps={{
@@ -131,7 +131,7 @@ console.log(weight);
               margin="dense"
               label="price"
               type="number"
-              inputProps={{min:1}}
+              inputProps={{ min: 1 }}
               fullWidth
               variant="standard"
               required={true}
