@@ -44,10 +44,7 @@ function CreatePackage() {
     }
 
     if (name.length && weight.toString().length && price.toString().length) {
-      setOpen(false)
-      setName("")
-      setWeight("")
-      setPrice("")
+      handleClose()
       incPakLength()
       setPackages(packages.concat(
         {
@@ -67,6 +64,9 @@ function CreatePackage() {
   }
   const handleClose = () => {
     setOpen(false);
+    setName("")
+    setWeight("")
+    setPrice("")
   }
   return (
     <div>
