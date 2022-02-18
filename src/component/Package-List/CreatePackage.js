@@ -114,6 +114,7 @@ function CreatePackage() {
               margin="dense"
               label="weight"
               type="number"
+              inputProps={{min:1}}
               fullWidth
               variant="standard"
               InputProps={{
@@ -128,6 +129,7 @@ function CreatePackage() {
               margin="dense"
               label="price"
               type="number"
+              inputProps={{min:1}}
               fullWidth
               variant="standard"
               required={true}
