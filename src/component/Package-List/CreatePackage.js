@@ -109,7 +109,7 @@ function CreatePackage() {
 
             <TextField
               error={boolWeight}
-              onChange={(e) => { setWeight(parseInt(e.target.value)); setBoolWeight(false) }}
+              onChange={(e) => { setWeight(e.target.value); setBoolWeight(false) }}
               value={weight}
               margin="dense"
               label="weight"
@@ -123,7 +123,7 @@ function CreatePackage() {
             />
             <TextField
               error={boolPrice}
-              onChange={(e) => { setPrice(parseInt(e.target.value)); setBoolPrice(false) }}
+              onChange={(e) => { setPrice(e.target.value); setBoolPrice(false) }}
               value={price}
               margin="dense"
               label="price"
