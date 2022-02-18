@@ -1,6 +1,6 @@
 export function PriceSum(id, packages) {
   let count = 0;
-  packages.filter((packages) => packages.customerid === id).forEach((value) => { count += parseInt(value.price)})
+  packages.filter((packages) => packages.customerid === id).forEach((value) => { count += parseInt(value.price) })
   return count
 }
 
