@@ -57,7 +57,7 @@ function InvoiceCustomer(props) {
     )
   }
   else return (
-    <p>We couldn't find the id you loocking for :/</p>
+    <p className='errorText'>We couldn't find the id you loocking for :/</p>
   )
 }
 

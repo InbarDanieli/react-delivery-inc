@@ -53,9 +53,10 @@ p {
   margin-top: 32px;
 }
 
-.price {
+.price{
   background-color: rgb(224, 223, 223);
 }
+
 
 .shpping-body, .thank-you-text {
   margin-top: 64px;
@@ -63,18 +64,16 @@ p {
 
 .thank-you-text {
   text-align: center;
-
 }
 
-.errorText {
+.errorText{
   text-align: center;
 }
 
 @media screen and (max-width: 600px) {
-  p {
+  p{
     font-size: 75%;
   }
-
   .header, .shpping-body {
     gap: 32px;
     width: 80%;
