@@ -29,7 +29,7 @@ function App() {
     customers: appData.customers,
     packages: appData.packages,
     pakLength: packageLength,
-    incPakLength:()=> setPackageLength(packageLength+1),
+    incPakLength: () => setPackageLength(packageLength + 1),
     setData: (data) => setAppData(data),
     setPackages: (packages) => setAppData({ customers: appData.customers, packages }),
     setCustomers: (customers) => setAppData({ packages: appData.packages, customers }),

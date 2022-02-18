@@ -34,7 +34,7 @@ function CreatePackage() {
 
   function addPackage() {
     if (!name.length) {
-       setBoolName(true)
+      setBoolName(true)
     }
     if (!weight.toString().length) {
       setBoolWeight(true)
@@ -43,7 +43,7 @@ function CreatePackage() {
       setBoolPrice(true)
     }
 
-    if(name.length && weight.toString().length && price.toString().length) {
+    if (name.length && weight.toString().length && price.toString().length) {
       setOpen(false)
       setName("")
       setWeight("")
@@ -53,9 +53,9 @@ function CreatePackage() {
         {
           "id": `pak${pakLength}`,
           "weight": `${weight}kg`,
-          "customerid": customers.find((customer)=> customer.name === name)?.id,
+          "customerid": customers.find((customer) => customer.name === name)?.id,
           "price": price,
-          "shippingOrder": packages.length+1
+          "shippingOrder": packages.length + 1
         })
       );
     }
@@ -103,7 +103,7 @@ function CreatePackage() {
                 <MenuItem value="">
                   <em>select</em>
                 </MenuItem>
-                {customers.map((customer, index)=><MenuItem key={index} value={customer.name}>{customer.name}</MenuItem>)}
+                {customers.map((customer, index) => <MenuItem key={index} value={customer.name}>{customer.name}</MenuItem>)}
               </Select>
             </FormControl>
 

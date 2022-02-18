@@ -43,8 +43,8 @@ function CustomerList() {
                   <TableCell >{row.name}</TableCell>
                   <TableCell >
                     <Link style={{ textDecoration: "none", color: "inherit" }} to={`/invoice/${row.id}`}>
-                    <Button variant="contained">Create Invoice</Button>
-                  </Link>
+                      <Button variant="contained">Create Invoice</Button>
+                    </Link>
                   </TableCell>
                   <TableCell ><Button onClick={() => DeleteHendler(row.id)} variant="contained">Delete</Button></TableCell>
                 </TableRow>

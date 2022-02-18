@@ -20,7 +20,7 @@ function PackageList() {
   function DeleteHendler(Id) {
     setPackages(packages.filter((row) => row.id !== Id)
       .map((row, index) => {
-        return { ...row, shippingOrder: index + 1}
+        return { ...row, shippingOrder: index + 1 }
       }))
   }
 

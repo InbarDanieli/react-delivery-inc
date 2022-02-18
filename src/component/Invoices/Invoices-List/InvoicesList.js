@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import UserContext from '../../../userContext';
-import {PriceSum, WeightSum} from "../utils"
+import { PriceSum, WeightSum } from "../utils"
 
 
 import Table from '@mui/material/Table';
@@ -15,12 +15,12 @@ import Paper from '@mui/material/Paper';
 
 
 function InvoicesList() {
-  const {packages, customers } = useContext(UserContext)
-  
+  const { packages, customers } = useContext(UserContext)
+
 
   return (
     <div>
-            <TableContainer component={Paper}>
+      <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
