@@ -69,6 +69,9 @@ function CreatePackage() {
     setName("")
     setWeight("")
     setPrice("")
+    setBoolPrice(false)
+    setBoolWeight(false)
+    setBoolName(false)
   }
   return (
     <div>
