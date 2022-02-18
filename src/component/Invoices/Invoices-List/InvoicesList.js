@@ -17,7 +17,6 @@ import Paper from '@mui/material/Paper';
 function InvoicesList() {
   const { packages, customers } = useContext(UserContext)
 
-
   return (
     <div>
       <TableContainer component={Paper}>

@@ -21,12 +21,12 @@ import AddIcon from '@mui/icons-material/Add';
 
 
 function CreatePackage() {
+  const { packages, customers, setPackages, pakLength, incPakLength } = useContext(UserContext)
+
   const [open, setOpen] = useState(false);
   const [name, setName] = useState('');
   const [weight, setWeight] = useState('');
   const [price, setPrice] = useState('');
-
-  const { packages, customers, setPackages, pakLength, incPakLength } = useContext(UserContext)
 
   const [boolName, setBoolName] = useState(false)
   const [boolWeight, setBoolWeight] = useState(false)
