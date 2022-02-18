@@ -32,18 +32,20 @@ function CreatePackage() {
   const [boolWeight, setBoolWeight] = useState(false)
   const [boolPrice, setBoolPrice] = useState(false)
 
+console.log(weight);
+
   function addPackage() {
     if (!name.length) {
       setBoolName(true)
     }
-    if (!weight.toString().length) {
+    if (!weight.toString().length || weight < 1) {
       setBoolWeight(true)
     }
-    if (!price.toString().length) {
+    if (!price.toString().length || price < 1) {
       setBoolPrice(true)
     }
 
-    if (name.length && weight.toString().length && price.toString().length) {
+    if (name.length && weight.toString().length && price.toString().length && price > 1 && weight > 1) {
       handleClose()
       incPakLength()
       setPackages(packages.concat(
