@@ -43,7 +43,7 @@ function Header() {
         open={state}
         onClose={toggleDrawer(false)}
       >
-        <List style={{ width: "300px" }}>
+        <List style={{ width: "200px" }}>
           <Link style={{ textDecoration: "none", color: 'inherit' }} to={"/Packeges"}>
             <ListItem button onClick={toggleDrawer(false)}>
               <ListItemText primary={"Packages"} />
